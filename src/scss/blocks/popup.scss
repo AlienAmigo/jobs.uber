@@ -1,0 +1,96 @@
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(52, 55, 65, 0.6);
+  overflow: hidden;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    width: max-content;
+    min-width: 300px;
+    max-width: calc(100vw - 50px);
+    min-height: 100px;
+    max-height: calc(100vh - 50px);
+    overflow: hidden;
+    background-color: $white-color;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 0.25s ease-in;
+  }
+
+  &__inner {
+    @include scroll-style();
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    margin: 90px 50px 75px 75px;
+    padding-right: 20px;
+  }
+
+  &__close {
+    @include hover();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: calc(#{$screen-lg} - 1px)) {
+
+  .popup {
+
+    &__inner {
+      @include scroll-style();
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      margin: 90px 50px 75px 75px;
+      padding-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: calc(#{$screen-sm} - 1px)) {
+
+  .popup {
+
+    &__body {
+      align-self: stretch;
+      max-width: calc(100vw - 20px);
+      max-height: calc(100vh - 20px);
+    }
+
+    &__inner {
+      @include scroll-style();
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      margin: 50px 25px 25px;
+    }
+
+    &__close {
+      top: 25px;
+      right: 25px;
+    }
+  }
+}

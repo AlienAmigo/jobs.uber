@@ -1,0 +1,27 @@
+//- Примеси
+mixin video(vid, cover, autoplay: false)
+  .video__wrap
+    video.video.video__hidden(loop='loop', width='850', autoplay=`${autoplay ? 'autoplay' : '0'}`, control)
+      source(src=`video/${vid}`, type='video/webm')
+    .video__cover
+      img(src=`img/${cover}` alt='')
+
+
+mixin ytvideo(id, img)
+  .yt-video
+    a.yt-video__link(href=`https://youtu.be/${id}/`)
+      picture
+        - if(!img)
+          source(srcset=`https://i.ytimg.com/vi_webp/${id}/maxresdefault.webp`, type='image/webp')
+          img.yt-video__media(data-video-id=`${id}`, src=`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`, alt='')
+        - else
+          img.yt-video__media(data-video-id=`${id}`, src=`${img}`, alt='')
+    button.yt-video__button(aria-label='Play video')
+      <svg width='68' height='48' viewBox='0 0 68 48'><path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path><path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path></svg>
+
+//- Popup
+mixin popup
+  .popup
+    .popup__body
+      .popup__close
+      .popup__inner
