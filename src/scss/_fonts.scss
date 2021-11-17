@@ -1,9 +1,21 @@
-// @font-face {
-//   font-family: Montserrat;
-//   src:
-//     url('') format('woff2'),
-//     url('') format('woff');
-//   font-weight: 300;
-//   font-style: normal;
-//   font-display: block;
-// }
+@font-face {
+  font-family: Roboto;
+  src:
+    url('../fonts/roboto-regular.woff2') format('woff2'),
+    url('../fonts/roboto-regular.woff') format('woff'),
+    url('../fonts/roboto-regular.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: Roboto;
+  src:
+    url('../fonts/roboto-bold.woff2') format('woff2'),
+    url('../fonts/roboto-bold.woff') format('woff'),
+    url('../fonts/roboto-bold.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}

@@ -2,7 +2,7 @@
 
 ## adaptive html / css/ js page layout
 
-Ссылка на макет: https://www.figma.com/file/qiD8r6qU5smMRnELCieNZ6/jobs.uber-(Copy)-(Copy)?node-id=0%3A1
+Ссылка на макет: https://www.figma.com/file/qiD8r6qU5smMRnELCieNZ6/jobs.uber?node-id=0%3A1
 
 Ссылка на страницу на githubpages:
 

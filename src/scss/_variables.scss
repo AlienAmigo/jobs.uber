@@ -1,16 +1,17 @@
-$main-color:          #7dcbcf;
-$warning-color:       #fdc05d;
+$main-color:          #b5ca00;
+$secondary-color:     #8664c6;
+$design-color:        #aad4c8;
 
 $white-color:         #ffffff;
 
-$gray-light:          #f2f2f2;
+$gray-light:          #c4c4c4 ;
 $gray-dark:           #231f20;
 
-$text-color:          $gray-dark;
+$text-color:          #000000;
 
 $transparent-color:   rgba(255, 255, 255, 0);
 
-$font-family:         -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+$font-family:         'Roboto', Arial, 'Helvetica Neue', sans-serif;
 $font-size:           14px;
 $line-height:         1.4;
 
@@ -18,3 +19,6 @@ $screen-xs:           480px;
 $screen-sm:           768px;
 $screen-md:           992px;
 $screen-lg:           1200px;
+
+$container-xs:        320px;
+$container-lg:        1050px;
