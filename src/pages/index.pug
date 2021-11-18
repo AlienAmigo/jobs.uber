@@ -1,20 +1,82 @@
 extends ../pug/layout.pug
 
 block meta
-  title Главная
+  title UberClean
   meta(name='description', content='')
 
-//- block append head
-//-   link(rel='stylesheet', href='css/some.css')
-
 block header
-  p Лого
+  header.header
+    img.header-logo(src='img/logo.png', alt='Uber Clean', loading='lazy')
+    button.btn(id="sign-up-header-btn") Записаться
+    .header__title-wrapper
+      h2.header__title Требуются специалисты по уборке
+      h4.header__subtitle Надежный доход и&nbsp;удобный график работы
 
 block content
-  h1 Заголовок
+  main
+    section.offer
+      h3.offer__subtitle Мы предлагаем
+      ul.offer__list
+        li.offer-item
+          h4.offer-item__title Мы предлагаем
+          p.offer-item__text Выплата на&nbsp;банковскую карту. 2&nbsp;раза в&nbsp;месяц.
+        li.offer-item
+          h4.offer-item__title Удобное расписание
+          p.offer-item__text Большой выбор графиков. Можно составить индивидуальный.
+        li.offer-item
+          h4.offer-item__title Много заказов
+          p.offer-item__text Скажите свои рабочие дни, а&nbsp;мы&nbsp;обеспечим заказами.
+        li.offer-item
+          h4.offer-item__title Выдаем инвентарь
+          p.offer-item__text Все необходимое для&nbsp;уборки предоставляет компания.
 
-//- block footer
-//-   p footer
+    section.team
+      h3.team__title Как стать частью команды?
+      ol.team__list
+        li.team-item
+          h4.team-item__title Заполните анкету
+          p.team-item__text Расскажите немного про&nbsp;себя. Нам&nbsp;важно познакомиться.
+        li.team-item
+          h4.team-item__title Оплачиваемая стажировка
+          p.team-item__text Выйдете на&nbsp;реальный заказа с&nbsp;опытным клинером. Стажировка полностью оплачивается
+        li.team-item
+          h4.team-item__title Работайте зарабатывайте
+          p.team-item__text Вы&nbsp;часть дружной команды. Сделайте свою жизнь стабильной с&nbsp;UberClean.
 
-//- block append page-bottom
-//-   script(src='js/some.js')
+    section.questionnaire
+      h4.questionnaire__title Анкета
+      .questionnaire__form-wrapper
+        form.questionnaire-form(method="POST", id="questionnaire-form", action="", autocomplete="on")
+          .questionnaire-form__left-column
+            label.questionnaire-form__label(for="name")
+              span.questionnaire-form__field-title Ф.И.О.
+              input.questionnaire-form__field-input(name="name", type="text")
+            label.questionnaire-form__label(for="date-of-birth")
+              span.questionnaire-form__field-title Дата рождения
+              input.questionnaire-form__field-input(name="date-of-birth", type="datepickers")
+          .questionnaire-form__right-column
+            label.questionnaire-form__label(for="phone")
+              span.questionnaire-form__field-title Телефон
+              input.questionnaire-form__field-input(name="phone", type="tel")
+            label.questionnaire-form__label(for="citizenship")
+              span.questionnaire-form__field-title Гражданство
+              select.questionnaire-form__field-input(name="citizenship", placeholder="Записаться на собеседование")
+                option(value="Россия") Россия
+                option(value="Беларусь") Беларусь
+                option(value="Казахстан") Казахстан
+            input(type="submit", value="Записаться на собеседование")
+
+    section.faq
+      h3.faq__title Отвечаем на&nbsp;вопросы
+      .faq__wrapper
+        h5.faq__question На&nbsp;первую уборку я&nbsp;поеду одна?
+        p.faq__answer Нет. На&nbsp;первый заказ вы&nbsp;едите с&nbsp;опытным клинером, вашим наставником.
+        h5.faq__question Мне оплатят стажировку?
+        p.faq__answer Да, стажировка оплачивается. Ведь вы едите на&nbsp;полноценный заказ.
+        h5.faq__question Что мне нужно делать на&nbsp;уборке?
+        p.faq__answer Это&nbsp;все расскажут на&nbsp;собеседовании. Потом все повторят на&nbsp;уборке на&nbsp;практике. И&nbsp;выдадим очень подробную инструкцию.
+        h5.faq__question Какой у&nbsp;меня будет график работы?
+        p.faq__answer У&nbsp;нас большие и&nbsp;гибкие возможности. Поэтому вы&nbsp;можете составить свой график работы. Указать время в&nbsp;которое принимаете заказы. Самые популярные графики в&nbsp;нашей компании 5/2, 6/1, 2/2.
+        h5.faq__question Что взять с&nbsp;собой на&nbsp;первую уборку?
+        p.faq__answer Весь инвентарь будет у&nbsp;вашего наставника. Вам нужно только взять сменную одежду для&nbsp;комфортной работы. После стажировки вам предоставят форму.
+      button.btn(id="sign-up-faq-btn") Записаться
